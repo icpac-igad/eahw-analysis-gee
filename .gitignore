@@ -118,3 +118,4 @@ dist
 *.rdb
 .env
 privatekey.json
+.node-xmlhttprequest-sync*

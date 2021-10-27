@@ -16,7 +16,7 @@ const getRegion = (geojson) => {
     }
   });
 
-  return ee.FeatureCollection(polygons);
+  return [ee.FeatureCollection(polygons), polygons.length];
 };
 
 module.exports = { getRegion };
