@@ -6,6 +6,6 @@ module.exports = {
     dirLogFile: null,
   },
   gee: {
-    service_account: process.env.GEE_ACCOUNT,
+    private_key_path: process.env.GEE_PRIVATE_KEY_PATH,
   },
 };
