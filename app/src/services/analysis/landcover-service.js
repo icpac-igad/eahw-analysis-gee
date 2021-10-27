@@ -12,10 +12,12 @@ class LandCoverService {
     landCoverImage = landCoverImage.addBands([ee.Image.pixelArea()]);
 
     const reducer = ee.Reducer.frequencyHistogram().unweighted().group();
+    
+    const [region] = getRegion(geojson)
 
     const reduce_args = {
       reducer: reducer,
-      geometry: getRegion(geojson),
+      geometry:region ,
       scale: 9.276624232772797,
       bestEffort: false,
       maxPixels: 1e20,
