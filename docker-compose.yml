@@ -8,4 +8,4 @@ services:
     volumes:
       - ${GEE_PRIVATE_KEY_PATH}:/usr/src/app/privatekey.json
     ports:
-      - 3000
+      - ${PORT}:3000
