@@ -4,8 +4,6 @@ const ee = require("@google/earthengine");
 
 require("dotenv").config({ silent: true }); // NOTE: make sure dot env is loaded first
 
-console.log(process.env.GEE_PRIVATE_KEY_PATH);
-
 const GEE_PRIVATE_KEY_PATH = process.env.GEE_PRIVATE_KEY_PATH;
 
 const logger = require("logger");
