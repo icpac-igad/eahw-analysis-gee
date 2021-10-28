@@ -6,6 +6,8 @@ services:
     container_name: eahw_analysis_gee
     restart: ${RESTART_POLICY}
     volumes:
-      - ${GEE_PRIVATE_KEY_PATH}:/usr/src/app/privatekey.json
+      - ${GEE_HOST_PRIVATE_KEY_PATH}:${GEE_CONTAINER_PRIVATE_KEY_PATH}
+    environment:
+      - GEE_PRIVATE_KEY_PATH=${GEE_CONTAINER_PRIVATE_KEY_PATH}
     ports:
       - ${PORT}:3000
